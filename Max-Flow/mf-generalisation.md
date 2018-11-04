@@ -1,6 +1,4 @@
-Demands
-
- - Max flow with demands
+ **Max flow with demands**
  
  Input: Flow network- directed G=(V, E) with s,t ∈ V; capacities c(e) > 0 for e ∈ E & demands d(e) >=0 for e ∈ E
  
