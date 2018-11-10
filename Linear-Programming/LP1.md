@@ -41,18 +41,21 @@ x1+3x2+2x3<=1000
 x2+3x3<=500
 x1,x2,x3>=0
 
-# Objective function (vector)
+**Objective function (vector)**
+
 c = [[ 1 ],
      [ 6 ],
      [ 10 ]]
 
-# Constraint matrix
+**Constraint matrix**
+
 A = [[ 1, 0, 0 ],
      [ 0, 1, 0 ],
      [ 1, 3, 2 ],
      [ 0, 1, 3 ]]
 
-# Constraint values (vector)
+**Constraint values (vector)**
+
 b = [[ 300 ],
      [ 200 ],
      [ 1000 ],
@@ -63,5 +66,21 @@ _Converting_
 - Min instead of max? -> Multiply by -1
 - a1x1+...+anxn >= b instead of <=b? Also multiply by -1!
 - Equality constraint- we can convert to two inequality constraints
+- Strict inequality -> NOT ALLOWED in LP (not well defined)
 
+_Geometric View_
+
+- n variables -> n dimensions
+- n+ m constraints
+- feasible region = intersection satysfying n+m halfspaces = convex polyhedron
+- vertices = points satisfying n constraisnt with '='; m constrains with '<='
+
+_Simplex algorithm_
+
+- Worst case: exponential time
+- Widely used on HUGE LPs
+
+1. Start at x=0
+2. Look for neighbouring vertex with higher objective value
+3. Then move there and repeat (2) - else output (x)
                      

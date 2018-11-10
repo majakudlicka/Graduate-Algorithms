@@ -4,7 +4,7 @@
  
  Feasible flow is a flow f where: for e ∈ E, d(e) <= f(e) <= c(e)
  
- Reduction overview
+ _Reduction overview_
  
  Feasible flow -> Max flow problem
  
@@ -15,26 +15,25 @@
  
  c'(e)= c(e) - d(e) (intution- we shift capacities by demand; 0 in new graph corresponds to demand in original graph)
  
- Problem: what is a balanced flow for G' is not necessarily a balanced flow for G
+ _Problem_: what is a balanced flow for G' is not necessarily a balanced flow for G
  
- Solution: Add edges from s' to each vertex with total demand into vertex and edges to t' with total demand out of 
+ _Solution_: Add edges from s' to each vertex with total demand into vertex and edges to t' with total demand out of 
  vertex
  
  for v ∈ V, add s'-> v with c' = d(in)(v)
             add v-> t' with c'=d(out)(v) 
             
-Problem: Now that s and t are internal vertices, we dont have any inflow into s or any outflow out of t so they are not balanced
+_Problem_: Now that s and t are internal vertices, we dont have any inflow into s or any outflow out of t so they are not balanced
 
-Solution: Add edge from s to t with infinite capacity
+_Solution_: Add edge from s to t with infinite capacity
 
 Say f' is saturating if size (f') = D (total demand in original network)
 
-Lemma: G if feasible flow if and only if G' has a saturating flow
+**Lemma**: G if feasible flow if and only if G' has a saturating flow
 
-Solution: 
+_Solution_: 
 
 - Find a feasible flow f for G; if one exists
-
 - Augment in residual graph G(f)
 
 Difference to max- flow problem: 
