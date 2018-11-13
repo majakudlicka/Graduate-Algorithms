@@ -12,8 +12,9 @@ Let m* denote the max number of satisfied clauses -> clearly m* <=m
 
 _Randomised algorithm_
                                                m
-Exppected number of satisified clauses = E[W] = Σ E[Wj] >= (m/2)
-                                               j=1                    
+Expected number of satisified clauses = E[W] = Σ E[Wj] >= (m/2)
+                                               j=1
+
 (One half approximation algorithm)
 
 If all clauses are of same size (example -3) this simple algorithm performs very well

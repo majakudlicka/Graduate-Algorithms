@@ -12,13 +12,14 @@
  Search Problem form:
  
  Given instance I
-        -find a solution S for I if one exists
-        - output No if I has no solutions
+
+ - find a solution S for I if one exists
+ - output No if I has no solutions
         
 Examples of an NP-problem: 
 
--SAT (search problem, we can verify solutions in polynomial time)
--MST
+- SAT (search problem, we can verify solutions in polynomial time)
+- MST
 
 Knapsack not known to be in NP nor P
         
