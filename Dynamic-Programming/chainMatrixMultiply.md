@@ -38,3 +38,30 @@ above diagonal
 ![matrixMultiplyStrings.png](matrixMultiplyStrings.png)
 
 i: beginning of the substring, j: end of substring
+
+*Pseudocode* m~o~....m~n~ (matrice sizes)
+
+For i =1->n C(i,i) = 0 (base case)
+
+For s=1-n-1 (width)
+
+&nbsp;&nbsp;&nbsp;&nbsp;For i=1-> n-s (row)
+
+&nbsp;&nbsp;&nbsp;&nbsp;Let j= i+s, C(j,j) = Infinity (j: end of
+substring)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For l= i-> j-1
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr = m~i-1~m~l~m~j~ +
+C(i, l) + C(l+1, j)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If C(i,j) > curr then
+C(i,j) = curr
+
+Return C(1,n)
+
+O(n^3^)
+
+Another example
+
+![chainMatrixMultiplyExample.jpg](chainMatrixMultiplyExample.jpg)

@@ -5,7 +5,7 @@
  
  Search problem - rough definition - problem where we can efficiently verify solutions
  
- P = class of search problems that are solvabe in polynomial time
+ P = class of search problems that are solveable in polynomial time
  
  P < NP
  
