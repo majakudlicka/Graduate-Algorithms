@@ -4,13 +4,13 @@ Goal: Find th median / fith k^th^ smallest
 
 *Easy algorithm*
 
-Sort A & output the kth element --> mergesort O(nlogn)
+Sort A & output the kth element --> mergesort O(n x logn)
 
 *Quicksort*
 
 1. Choose a pivot p (how?)
 2. Partition A into A < p, A = p, A > p
-3. Recursively sort A <p and A >p
+3. Recursively sort A < p and A > p
 
 *Search example: pivot*
 
@@ -77,6 +77,8 @@ T(n) = T(3/4)n + T(n/5) + O(n) --> acceptable time to find a good pivot
 5. Partition A into A >p, A = p, A <p
 6. If K <= |A<p| then return FastSelect(A<p, k); if k > |A<p| +|A=p|
    then return FastSelect(A>p, k-|A<p| -|A=p|) else output p (T(3/4)n))
+
+
    T(3/4)n + T(1/5)n + O(n) = O(n)
 
 

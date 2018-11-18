@@ -9,7 +9,7 @@ Output: nth Fibonacci number
 
 Fibonacci numbers grown exponentially by ɸ (phi) = (1+ √5)/2 ~ 1.618
 
-This is known as a 'golden ratio.
+This is known as a 'golden ratio'.
 
 *Naive algorithm Fib1*
 

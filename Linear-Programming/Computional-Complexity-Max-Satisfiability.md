@@ -11,16 +11,18 @@ Max-SAT is NP-hard
 Let m* denote the max number of satisfied clauses -> clearly m* <=m
 
 _Randomised algorithm_
-                                               m
-Expected number of satisified clauses = E[W] = Σ E[Wj] >= (m/2)
-                                               j=1
+
+Expected number of satisified clauses
+
+![randomisedAlgorithm.png](randomisedAlgorithm.png)
+
 
 (One half approximation algorithm)
 
 If all clauses are of same size (example -3) this simple algorithm performs very well
 In fact, it is NP hard to do better.
 
-For general size of clause = k. it performs with expectation (1-2^(-k))
+For general size of clause = k. it performs with expectation (1-2^(-k)^)
 
 This algorithm can be derandomizes using the method of conditional probabilities (we assign T or F for all variables and look
 at probability of the how many clauses get satisfied, picking the more optimal)

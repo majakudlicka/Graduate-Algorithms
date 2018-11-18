@@ -10,7 +10,7 @@ a,b,c,d - real numbers; b~i~, d~i~ - imaginary numbers
 
 2 complex numbers: a+ b~i~, c+ d~i~
 
-(a+b~i)(c+d~i~) = ac - bd + (bc+ad)i
+(a+b~i~)(c+d~i~) = ac - bd + (bc+ad)i
 
 (a+b)(c+d) = ac + bd
 

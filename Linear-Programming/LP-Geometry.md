@@ -1,4 +1,4 @@
-## LP Geometry
+**LP Geometry**
 
 Optimum of LP is achieved at a vertex of the feasible region except if
 

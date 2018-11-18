@@ -17,7 +17,7 @@ z^p-1^ ≡ 1 mod p
 - Basis of RSA algorithm
 - Test if number z is prime
 
-**Euler's theorem **- generalisation of Fermat's Little Theorem
+**Euler's theorem**- generalisation of Fermat's Little Theorem
 
 For any N,z where gcd(z,N) = 1 then z^Ф(N)^ ≡ 1 mod N
 

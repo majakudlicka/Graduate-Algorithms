@@ -6,9 +6,6 @@ Boolean formula with n variables x~1~...x~n~
 
 2 n literals x~1~, !x~1~, x~2~, !x~2~ etc
 
-∧ (And)
-
-∨ (Or)
 
 CNF = Conjunctive Normal Form Clause: OR of several literals
 

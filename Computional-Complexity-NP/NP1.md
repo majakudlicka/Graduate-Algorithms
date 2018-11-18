@@ -1,4 +1,6 @@
- _Def_ Problem is intractable = unlikely to be solved efficiently 
+ _Def_
+
+ Problem is intractable = unlikely to be solved efficiently
  (in time polynomial to the input size)
  
  NP = class of all search problems

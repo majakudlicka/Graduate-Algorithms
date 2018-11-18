@@ -2,14 +2,14 @@
 
 T(n) = 4T(2/n) + O(n)
 
-For some constant c >0, T(n)<= $T(n/2) + cn, T(1) <=c
+For some constant c >0, T(n)<= T(n/2) + cn, T(1) <=c
 
 T(n)<=cn+ 4T(n/2) <= cn + 4[ 4T(n/n^2^) + cn/2] = cn (1+ 4/2) +
 4^2^T(n/2^2^) <= cn(1+4/2) + 4^2^[4T(n/2^3^) + c(n/2^2^)] = cn (1+
 (4/2)+ (4/2)^2^ + 4^3^T(n/2^3^) <= cn(1+ (4/2) + (4/2)^2^ + .. +
 (4/2)^i-1^) + $T(n/2^i^) <= cn(1+ (4/2) + (4/2)^2^ + .. +
 (4/2)^log~2~n-1^) + 4^log~2~n^T(1) = O(n) +O((4/2)^log~2~n^) +O(n^2^) =
-)O(n)+ O(n) + O(n^2^) = O(n^2^) (lats term dominates because >1)
+)O(n)+ O(n) + O(n^2^) = O(n^2^) (last term dominates because >1)
 
 (We want the last expression to be our base time and equal 1)
 
@@ -44,7 +44,7 @@ T(n) = aT(n/b) + O(n)
 
 T(n) = cn(1+ (a/b) + (a/b)^2^ + .. + (a/b)^logb(n-1)^ + a ^logbn^T(1) =
 
-- O(n^logba) if a > b
+- O(n^logba^) if a > b
 - O(n x logn) if a = b
 - O(n) if a <b
 
