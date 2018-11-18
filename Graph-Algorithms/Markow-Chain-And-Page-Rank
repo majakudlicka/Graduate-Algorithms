@@ -1,0 +1,160 @@
+*Example Markow Chain*
+
+![markovChainExample.png](markovChainExample.png)
+
+- Time t = 0,1,2
+- P(i,j) = Probability of a transition i-> j
+- For all i sum of P(i,j) = 1
+- Vertex = state of a Markov chain
+
+Directed Graph, possibly with self-loops
+
+*General Markov Chain*
+
+- N states {1,2,...N} --> huge N
+- Transition matrix P (P(i,j) = Pr (i->j))
+
+![transitionMatrix.png](transitionMatrix.png)
+
+Rows sum up to 1 --> P is stochastic
+
+*2-step transitions*
+
+What state at t=2?
+
+If we multiply matrix by itself, we get probabilities of transition from
+state i to j in 2 steps (t=2)
+
+P^k^(i,j) = Pr(i->j in k steps)
+
+For big k, p^k^ rows converge to same numbers
+
+![transitionMatrixForBigK.png](transitionMatrixForBigK.png)
+
+So it doesn't matter at which place you start - the probability of being
+at state x is constant for big k --> property of Markov chains
+
+π = [0.244, 0.406, ....] = Stationary distribution (vector towards which
+probabilities converge)
+
+*Linear algebra view*
+
+At t=0 in state 2, what is state at t=1?
+
+![linearAlgebraView.png](linearAlgebraView.png)
+
+For stationary distribution π, πP = π; π = eigenvector
+
+Stationary distribution: Any π where πP = π
+
+How fast we reach it  = mixing time
+
+Example of periodic (here bipartite) Markov Chain
+
+![bipartiteMC.png](bipartiteMC.png)
+
+It matters where we start! Because if we start on the left, we will be
+on the left at even times and on the right at odd times - and if we
+start on the right, vice versa
+
+The way to ensure that MC is not periodic - self-loop - corresponds to
+diagonal entires on the matrix
+
+![diagonalEntries.png](diagonalEntries.png)
+
+P(i,j) > 0
+
+Another pitfall: multiple SCCs
+
+For example:
+
+ ![multipleSCCs.png](multipleSCCs.png)
+
+ It matters where we start.
+
+Irreducible MC = 1 SCC. How to ensure? Connect all pairs of vertices ,
+P(i,j) > 0 gor all i, j
+
+If P is aperiodic and irreducible then it is ergodic --? implies that it
+has unique stationary distribution π.
+
+Page Rank = MC on a webgraph
+
+Page Rank alrogithm - Brin / Page 98'
+
+Webgraph - graph of web pages
+
+vertices = web pages
+
+directed edges = hyperlinks
+
+Let π(x) = "rank" of page x
+
+![webpageGraph.png](webpageGraph.png)
+
+For page x, Out(X) = set of web pages that have hyperlinks to x (like y
+above). x = { y: x->y ∈ E}
+
+In(x) = set of pages that link to x, {w: w-> x∈ E}
+
+*1st Idea*
+
+Set π(x) = | In(x)| = numbr of links to x
+
+Problem: Some web pages have thousands of links while others only a few
+
+Solution: If page y have |Out(y)| outgoing links then each gets
+1/(|Out(y)| of citation
+
+Problem2: Different pages have different importnce. Therefore, each
+websote should not just have '1' to give out, it should have the total
+of its own importance π
+
+![rankDefinition.png](rankDefinition.png)
+
+π corresponds to stationary distribution
+
+**Different perspective - random walk**
+
+From page x ∈ V, choose a random hyperlink and follow it. This is a
+Markow Chain with probability of going from y to x of
+
+P(x,y) = 1/ |Out(y)|
+
+When we follow the random walk logic, and perform matrix multiplication,
+we get the same formula as we did before we rank logic.
+
+*Random surfer*
+
+Random walk on a web graph - with 'random' button (use with 1-α probability)
+
+Damping factor α where 0 < α <=1 (α used y Google is ca. 0.85)
+
+From page y
+
+- With probability α follow random outgoing link from y
+- With probability 1 - α go to a random page (chosen uniformly from V)
+
+Let N = |V| = number of web pages
+
+P(x,y) = { (1-α)/ N + α / |Out(y)| if y-> x ∈E, (1-α)/N otherwise
+
+Ergodic MC -> unique stationary dist π
+
+π(x) = PageRank of page x
+
+The random surfer approach is not well-defined for sink nodes. Solution:
+set α = 0 for sinks.
+
+Why is random surfer ergodic?
+
+G' = αG + (1-α)K~n~
+
+if α < 1, then for all P(i,j) > 0
+
+**Finding π**
+
+Compute μ~0~P^t^ for big t
+
+
+
